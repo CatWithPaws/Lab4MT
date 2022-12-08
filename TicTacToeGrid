@@ -1,0 +1,57 @@
+public class TicTacToeGrid{
+    private int[][] Grid = new Grid[3][3];
+
+    private void ShowGrid(){
+        String result = "";
+        for(int i = 0;i < 3; i++){
+            for(int j = 0; j < 3;j++){
+                if(Grid[i][j] != 0){
+                    result += String.valueOf(Grid[i][j]);
+                }
+                else{
+                    result += " ";
+                }
+            }
+            result += "\n";
+        }
+    }
+
+    public void SetX(int x, int y){
+        array[x][y] = "X";
+        ShowGrid();
+    }
+
+    public void SetO(int x, int y){
+        array[x][y] = "O";
+        ShowGrid();
+    }
+
+    public void CheckWin(){
+        if
+        (
+            Grid[0][0] == Grid[1][0] == Grid[2][0] ||
+            Grid[0][1] == Grid[1][1] == Grid[2][1] ||
+            Grid[0][2] == Grid[1][2] == Grid[2][2] ||
+
+            Grid[0][0] == Grid[0][1] == Grid[0][2] ||
+            Grid[1][0] == Grid[1][1] == Grid[1][2] ||
+            Grid[2][0] == Grid[2][1] == Grid[2][2] ||
+
+            Grid[0][0] == Grid[1][1] == Grid[2][2] ||
+            Grid[0][2] == Grid[1][1] == Grid[2][0] ||
+        )
+        {
+            if(Grid[0][0] == "X") WinX();
+            else if(Grid[0][1] == "O") WinO();
+        }
+    }
+
+    public void WinX(){
+        System.out.println("First Player Player");
+    }
+
+    public void WinO(){
+        System.out.println("Second Player Player");
+    }
+
+}
